@@ -1,0 +1,29 @@
+ /* from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons */
+ 
+ /* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+	border-radius: 50%;
+	background: #0066BB;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+} 

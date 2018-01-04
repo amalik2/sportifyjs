@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+body {
+	background-image: url("content/bkg.jpg");
+	background-color: #cccccc;
+	background-size:     cover;
+	background-repeat:   no-repeat;
+	background-position: center center;              
+}

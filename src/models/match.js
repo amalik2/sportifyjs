@@ -30,76 +30,33 @@ export default class Match extends Queryable {
 	}
 	
 	/**
-	 * @return {String} the channel's unique name
+	 * @return {Date} the date this match occurred at
 	 */
-	getName() {
-		return this.name;
+	getDate() {
+		return this.date;
 	}
 	
 	/**
-	 * Sets the channel's unique name
-	 * @param {String} name - the channel's unique name
+	 * Adds a rating to this match
+	 * @param {Number!} rating - the user's rating for the match (out of X, where X is the highest rating available)
 	 */
-	setName(name) {
-		this.name = name;
+	rate(rating) {
+		ratingSum += rating;
+		++timesRated;
 	}
 	
 	/**
-	 * Gets all matches archived on this channel
-	 * @param {void(Match, Match)} sorter - optional function used to sort the matches
-	 * @return {[Match]} all of the matches archived on this channel
+	 * @return {Number} the match's average user rating
 	 */
-	getMatches(sorter) {
-		// TODO: get from UID query
-		let matches = [];
-		
-		if (sorter !== undefined) {
-			matches.sort(sorter);
-		}
-		
-		return matches;
+	getAverageRating() {
+		return this.ratingSum / this.timesRated;
 	}
 	
 	/**
-	 * Gets all matches that are currently live on this channel
-	 * @return {[Livestream]} all of the matches currently live on this channel
+	 * @return {Number} the number of times the match was viewed
 	 */
-	getLiveMatches() {
-		// TODO: get from UID query
-		return [];
-	}
-	
-	/**
-	 * @return {String} the category this channel falls under
-	 */
-	getCategory() {
-		return this.category;
-	}
-	
-	/**
-	 * Adds a new match to the channel
-	 * @param {Match!} match - the match to add
-	 */
-	uploadMatch(match) {
-		this.matches.push(match.getId());
-	}
-	
-	/**
-	 * Starts a new livestream on the channel
-	 * @param {Livestream!} match - the livestream to start
-	 */
-	startLivestream(match) {
-		this.livestreams.push(match.getId());
-	}
-	
-	/**
-	 * Ends a livestream, and archives it so that it is viewable anytime
-	 * @param {Livestream!} livestream - the currently active livestream to archive on the system
-	 */
-	archiveLivestream(livestream){
-		// TODO: remove from this.livestreams
-		
-		this.matches.push(livestream.getId());
+	getTimesViewed() {
+		return this.timesViewed;
 	}
 	
 }

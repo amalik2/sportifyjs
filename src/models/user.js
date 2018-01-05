@@ -1,6 +1,7 @@
 import './queryable';
 
 import './bill';
+import './subscription';
 
 /**
  * Represents anyone who has an account on the platform
@@ -16,10 +17,10 @@ export default class User extends Queryable {
 		
 		this.name = name;
 		
-		// {UniqueId} IDs of all bills issued to this user
+		// {[UniqueId]} IDs of all bills issued to this user
 		this.bills = [];
 		
-		// {Subscription} IDs of all subscriptions this user has
+		// {[Subscription]} IDs of all subscriptions this user has
 		this.subscriptions = [];
 	}
 	

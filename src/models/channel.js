@@ -1,5 +1,8 @@
 import './queryable';
 
+import {MAX_CHANNEL_RATING} from '../constants/ratings';
+import {calculateRating} from '../utilities/numberutilities';
+
 /**
  * Represents a channel that a league has on the platform
  */
@@ -48,7 +51,7 @@ export default class Channel extends Queryable {
 	 * @return {Number} the channel's average user rating
 	 */
 	getAverageRating() {
-		return this.ratingSum / this.timesRated;
+		return calculateRating(this.ratingSum, this.timesRated, MAX_CHANNEL_RATING);
 	}
 	
 	/**

@@ -1,5 +1,8 @@
 import './queryable';
 
+import {MAX_MATCH_RATING} from '../constants/ratings';
+import {calculateRating} from '../utilities/numberutilities';
+
 /**
  * Represents a match that a league has uploaded to a channel
  */
@@ -49,7 +52,7 @@ export default class Match extends Queryable {
 	 * @return {Number} the match's average user rating
 	 */
 	getAverageRating() {
-		return this.ratingSum / this.timesRated;
+		return calculateRating(this.ratingSum, this.timesRated, MAX_MATCH_RATING);
 	}
 	
 	/**

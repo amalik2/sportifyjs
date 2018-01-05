@@ -1,29 +1,23 @@
 import './queryable';
 
 /**
- * Represents a channel that a league has on the platform
+ * Represents a match that a league has uploaded to a channel
  */
-export default class Channel extends Queryable {
+export default class Match extends Queryable {
 
 	/**
-	 * Constructs a new Channel object
-	 * @param {String} name - the channel's unique name
-	 * @param {String} category - what sports category this channel falls under
+	 * Constructs a new Match object
+	 * @param {Date} date - the date the match occurred at
+	 * @param {String} url - the youtube URL of the match
 	 */
-	constructor(name, category) {
+	constructor(date, url) {
 		super();
 		
-		// {String} unique channel name
-		this.name = name;
+		// {Date} the date this match occurred at
+		this.date = date;
 		
-		// {String} what sports category this channel falls under
-		this.category = category;
-		
-		// {[UniqueId]} list of archived matches
-		this.matches = [];
-		
-		// {[UniqueId]} list of currently live matches
-		this.livestreams = [];
+		// {String} the youtube URL of this match
+		this.url = url;
 		
 		// {int} number of times this channel has been rated by users
 		this.timesRated = 0;
@@ -33,29 +27,6 @@ export default class Channel extends Queryable {
 		
 		// {Number} total number of times users have viewed this channel
 		this.timesViewed = 0;
-	}
-	
-	/**
-	 * Adds a rating to this channel
-	 * @param {Number!} rating - the user's rating for the channel (out of X, where X is the highest rating available)
-	 */
-	rate(rating) {
-		ratingSum += rating;
-		++timesRated;
-	}
-	
-	/**
-	 * @return {Number} the channel's average user rating
-	 */
-	getAverageRating() {
-		return this.ratingSum / this.timesRated;
-	}
-	
-	/**
-	 * @return {Number} the number of times the channel was viewed
-	 */
-	getTimesViewed() {
-		return this.timesViewed;
 	}
 	
 	/**

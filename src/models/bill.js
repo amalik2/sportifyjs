@@ -1,4 +1,9 @@
-export class Bill {
+import './queryable';
+
+/**
+ * Represents a bill that a user has received as a result of subscribibg to a channel
+ */
+export default class Bill extends Queryable {
 
 	/**
 	 * Constructs a new Bill object
@@ -6,7 +11,9 @@ export class Bill {
 	 * @param {Number} cost - the cost issued to the receiver of this bill
 	 * @param {UniqueID} channelId - unique ID of the channel that this bill was issued from
 	 */
-	constructor(date, cost, channelId){
+	constructor(date, cost, channelId) {
+		super();
+		
 		this.date = date;
 		this.cost = cost;
 		this.channelId = channelId;
@@ -15,7 +22,7 @@ export class Bill {
 	/**
 	 * @return {Date} the first day of the billing cycle for this bill
 	 */
-	getDate(){
+	getDate() {
 		return this.date;
 	}
 	
@@ -23,14 +30,14 @@ export class Bill {
 	 * Sets the first day of the billing cycle for this bill
 	 * @param {Date} date - the first day of the billing cycle for this bill
 	 */
-	setDate(date){
+	setDate(date) {
 		this.date = date;
 	}
 	
 	/**
 	 * @return {Number} the cost of this bill owed by the receiver
 	 */
-	getCost(){
+	getCost() {
 		return this.cost;
 	}
 	
@@ -38,14 +45,14 @@ export class Bill {
 	 * Sets the cost of this bill owed by the receiver
 	 * @param {Number} cost - the cost of this bill owed by the receiver
 	 */
-	setCost(cost){
+	setCost(cost) {
 		this.cost = cost;
 	}
 	
 	/**
 	 * @return {UniqueId} the unique ID of the channel that issued this bill
 	 */
-	getChannelId(){
+	getChannelId() {
 		return this.channelId;
 	}
 	

@@ -1,6 +1,5 @@
 .AppLogo {
 	float: left;
-    background-color: #b0e0e6;
 	height: auto; 
     width: auto; 
     max-width: 300px; 
@@ -9,5 +8,8 @@
 
 .TopBarSocialIcons {
 	float: right;
-    background-color: #b0e0e6;
+}
+
+.MenuBar {
+	background-color: black;
 }

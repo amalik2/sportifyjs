@@ -1,6 +1,10 @@
 .AppLogo {
 	float: left;
     background-color: #b0e0e6;
+	height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 130px;
 }
 
 .TopBarSocialIcons {

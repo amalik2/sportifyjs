@@ -1,13 +1,21 @@
+@font-face {
+  font-family: 'Jura';
+  src: url(content/Jura-Regular.ttf) format("truetype");
+}
+
 .App {
   text-align: center;
+  font-family: Jura;
 }
 
 .App-title {
   font-size: 1.5em;
+  font-family: Jura;
 }
 
 .App-intro {
   font-size: large;
+  font-family: Jura;
 }
 
 body {

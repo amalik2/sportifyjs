@@ -42,7 +42,12 @@ export class AppHeader extends Component {
 		return (
 			<div>
 				<img src={logo} className="AppLogo" alt="Sportify Logo" />
-				<SocialMediaIcons className="TopBarSocialIcons" />
+				<br />
+				<br />
+				<br />
+				<div className="TopBarSocialIcons">
+					<SocialMediaIcons />
+				</div>
 				<br />
 				<br />
 				<hr />

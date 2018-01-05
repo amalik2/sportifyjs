@@ -1,11 +1,12 @@
 .menu {
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
 	background-color: #000000;
 	color: #FFFFFF;
 	margin: 0;
 	border-radius: 7px;
+	font-family: Jura;
 }
 
 .menu:hover {

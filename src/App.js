@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import {AppHeader} from './views/appheader'
+import {HomePage} from './views/homepage'
 
 const MENU_BUTTONS = ["Home", "How It Works", "Pricing", "Channels", "My Account"];
 
@@ -12,8 +13,11 @@ class App extends Component {
 		super(props);
 		
 		this.state = {
-			// index of the current page in MENU_BUTTONS
-			menuIndex: 0
+			// {int} index of the current page in MENU_BUTTONS
+			menuIndex: 0,
+			
+			// {User} the signed in user (null if there is none)
+			user: null
 		};
 	}
 	
@@ -35,7 +39,7 @@ class App extends Component {
 		
 		if (index === 0) {			// home
 			return (
-				<p>HOME</p>
+				<HomePage user={this.state.user} />
 			);
 		} else if (index === 1) {	// how it works
 			return (

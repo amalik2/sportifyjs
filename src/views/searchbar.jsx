@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-import './menubutton.css';
+import {searchIcon} from "../content/Logo.png";
+import './searchbar.css';
 
 /**
  * Displays a search bar that allows the user to search for something on the site
  */
- // TODO: CSS + input text
+ // TODO: search icon image
 export class SearchBar extends Component {
 	
 	/**
@@ -26,6 +27,26 @@ export class SearchBar extends Component {
 	}
 	
 	/**
+	 * Handles the user changing the text in the search field
+	 * @param event - the input change event that invoked this function
+	 */
+	handleInputChange = (event) => {
+		this.setState({
+			input: event.target.value
+		});
+	}
+	
+	/**
+	 * Handles the user pressing a key
+	 * @param event - the key press event that invoked this function
+	 */
+	handleKeyPress = (event) => {
+		if (event.key === "Enter"){
+			this.state.onSubmit(this.state.input);
+		}
+	}
+	
+	/**
 	 * Handles the user submitting their search request
 	 */
 	onSubmit = () => {
@@ -34,7 +55,11 @@ export class SearchBar extends Component {
 	
 	render() {
 		return (
-			<button onClicked={this.onSubmit}>...</button>
+			<div>
+				<img src={searchIcon} alt="Search Icon" className="SearchIcon" />
+				<input className="MainSearchBar" type="text" name="search" placeholder="Search..." value={this.state.input}
+					onInput={this.handleInputChange} onKeyPress={this.handleKeyPress} />
+			</div>
 		);
 	}
 	

@@ -38,6 +38,14 @@ export class AppHeader extends Component {
 		this.state.menuClicked(index);
 	}
 	
+	/**
+	 * Handles the user starting a search for something using the header's search widget
+	 * @param {String} text - the text to search for
+	 */
+	onSearch = (text) => {
+		// TODO
+	}
+	
 	render() {
 		return (
 			<div>
@@ -62,7 +70,7 @@ export class AppHeader extends Component {
 						})
 					}
 				</ul>
-				<SearchBar onSubmit={null} />
+				<SearchBar onSubmit={this.onSearch} />
 			</div>
 		);
 	}

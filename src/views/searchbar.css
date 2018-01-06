@@ -1,0 +1,17 @@
+.MainSearchBar {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+	font-family: Jura;
+	border-radius: 7px;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.MainSearchBar:focus {
+    width: 33%;
+}
+
+.SearchIcon {
+	background-image: url("../content/Logo.png");         
+}

@@ -62,4 +62,11 @@ export default class Match extends Queryable {
 		return this.timesViewed;
 	}
 	
+	/**
+	 * @return {String} the URL this match was uploaded to
+	 */
+	getURL(){
+		return this.url;
+	}
+	
 }

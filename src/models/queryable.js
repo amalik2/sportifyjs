@@ -1,4 +1,4 @@
-export default class Queryable {
+export class Queryable {
 
 	/**
 	 * Constructs a new Queryable object

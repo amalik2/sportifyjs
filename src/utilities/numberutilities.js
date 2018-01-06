@@ -10,7 +10,7 @@ export function calculateRatio(one, two) {
 		return Infinity;
 	}
 	
-	if (one + two == 0){
+	if (one + two === 0){
 		return one;
 	}
 	
@@ -30,7 +30,7 @@ export function calculateRating(one, two, max) {
 		return Infinity;
 	}
 	
-	if (two == 0) {
+	if (two === 0) {
 		return Math.min(one, max);
 	}
 	

@@ -1,4 +1,4 @@
-import './queryable';
+import {Queryable} from './queryable';
 
 /**
  * Represents a user's subscription to a channel

@@ -1,4 +1,4 @@
-import './queryable';
+import {Queryable} from './queryable';
 
 import './bill';
 import './subscription';
@@ -6,7 +6,7 @@ import './subscription';
 /**
  * Represents anyone who has an account on the platform
  */
-export default class User extends Queryable {
+export class User extends Queryable {
 
 	/**
 	 * Constructs a new User object

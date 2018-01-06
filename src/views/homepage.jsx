@@ -27,7 +27,7 @@ export class HomePage extends Component {
 		if (this.state.user){
 			return (
 				<div>
-					<p className="HomePageBottomTextList">Subscribed Channels</p>
+					<p className="HomePageBottomText">Subscribed Channels</p>
 					<SubscriptionFeed user={this.state.user} />
 				</div>
 			);

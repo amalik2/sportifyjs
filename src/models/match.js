@@ -44,8 +44,8 @@ export default class Match extends Queryable {
 	 * @param {Number!} rating - the user's rating for the match (out of X, where X is the highest rating available)
 	 */
 	rate(rating) {
-		ratingSum += rating;
-		++timesRated;
+		this.ratingSum += rating;
+		++this.timesRated;
 	}
 	
 	/**

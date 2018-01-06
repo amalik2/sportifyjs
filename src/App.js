@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import {AppHeader} from './views/appheader'
-import {HomePage} from './views/homepage'
+import {AppHeader} from './views/appheader';
+import {HomePage} from './views/homepage';
+import {User} from './models/user';
 
 const MENU_BUTTONS = ["Home", "How It Works", "Pricing", "Channels", "My Account"];
 

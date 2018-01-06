@@ -1,4 +1,4 @@
-import './queryable';
+import {Queryable} from './queryable';
 
 import {MAX_CHANNEL_RATING} from '../constants/ratings';
 import {calculateRating} from '../utilities/numberutilities';
@@ -43,8 +43,8 @@ export default class Channel extends Queryable {
 	 * @param {Number!} rating - the user's rating for the channel (out of X, where X is the highest rating available)
 	 */
 	rate(rating) {
-		ratingSum += rating;
-		++timesRated;
+		this.ratingSum += rating;
+		++this.timesRated;
 	}
 	
 	/**

@@ -1,4 +1,4 @@
-import './queryable';
+import {Queryable} from './queryable';
 
 /**
  * Represents a bill that a user has received as a result of subscribibg to a channel

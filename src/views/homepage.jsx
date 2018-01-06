@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 
+import '../App.css';
+import './homepage.css';
+
+import {SubscriptionFeed} from './subscriptionfeed';
+
 /**
  * Displays the home page of the application
  */
 export class HomePage extends Component {
 	
 	/**
-	 * Constructs a new AppHeader object
+	 * Constructs a new HomePage object
 	 * @param props - Contains:
 	 * @param {User} user - the currently signed in user (can be null)
 	 */
@@ -17,22 +22,23 @@ export class HomePage extends Component {
 		};
 	}
 	
-	// TODO: if signed in, <SubscriptionFeed user={this.state.user}
-	// TODO: button style -> green background with slight rounding + white text
 	// TODO: no user --> positioning of text and button should be bottom of the page
 	render() {
 		if (this.state.user){
 			return (
 				<div>
-					
+					<p className="HomePageBottomTextList">Subscribed Channels</p>
+					<SubscriptionFeed user={this.state.user} />
 				</div>
 			);
 		} else {
 			return (
-				<div>
-					<h1>It's game time.</h1>
-					<h2>Never miss a game again.</h2>
-					<button>Join free for a month.</button>
+				<div className="HomePageBottom">
+					<ul className="HomePageBottomTextList">
+						<li className="HomePageBottomText">It's game time.</li>
+						<li className="HomePageBottomText">Never miss a game again.</li>
+					</ul>
+					<button className="SButton">Join free for a month.</button>
 				</div>
 			);
 		}

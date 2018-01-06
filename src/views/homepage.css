@@ -1,0 +1,19 @@
+.HomePageBottom {
+	position: relative;
+	min-height: 100%;
+}
+
+.HomePageBottomText {
+  color: #008000;
+  font-size: 36px;
+  display: inline-block;
+  float: left;
+  clear: left;
+  font-weight: bold;
+}
+
+.HomePageBottomTextList {
+	position: absolute;
+	bottom: 10px;
+	vertical-align: bottom;
+}

@@ -7,17 +7,17 @@
 	margin: 0;
 	border-radius: 7px;
 	font-family: Jura;
+	border: 2px solid #000000;
 }
 
 .menu:hover {
-    opacity: 0.7;
+    color: #00FF00;
 }
 
 ul {
     list-style-type: none;
     top: 0;
     width: 100%;
-	
 }
 
 li a {

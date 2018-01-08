@@ -1,7 +1,10 @@
 import {Queryable} from './queryable';
 
+import {removeFromArray} from "../utilities/arrayutilities";
+
 import {Bill} from './bill';
 import {Subscription} from './subscription';
+import {Channel} from './channel';
 
 /**
  * Represents anyone who has an account on the platform
@@ -20,7 +23,7 @@ export class User extends Queryable {
 		// {[UniqueId]} IDs of all bills issued to this user
 		this.bills = [];
 		
-		// {[Subscription]} IDs of all subscriptions this user has
+		// {[UniqueId]} IDs of all subscriptions this user has
 		this.subscriptions = [];
 	}
 	
@@ -56,7 +59,7 @@ export class User extends Queryable {
 	 */
 	getSubscribedChannels(){
 		// TODO: return channels through UID query
-		return [];
+		return this.subscriptions;
 	}
 	
 	/**
@@ -65,6 +68,7 @@ export class User extends Queryable {
 	 */
 	unsubscribeFrom(channel){
 		// TODO: unsubscribe
+		removeFromArray(this.subscriptions, channel.getId());
 	}
 	
 	/**
@@ -73,6 +77,7 @@ export class User extends Queryable {
 	 */
 	subscribeTo(channel){
 		// TODO: subscribe
+		this.subscriptions.push(channel.getId());
 	}
 	
 }

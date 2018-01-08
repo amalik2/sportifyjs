@@ -15,8 +15,8 @@ export default class Subscription extends Queryable {
 		
 		this.date = date;
 		
-		// {UniqueId} IDs of the channel that was subscribed to
-		this.uid = uid
+		// {UniqueId} ID of the channel that was subscribed to
+		this.uid = uid;
 	}
 	
 	/**

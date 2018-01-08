@@ -1,7 +1,7 @@
 import {Queryable} from './queryable';
 
-import './bill';
-import './subscription';
+import {Bill} from './bill';
+import {Subscription} from './subscription';
 
 /**
  * Represents anyone who has an account on the platform

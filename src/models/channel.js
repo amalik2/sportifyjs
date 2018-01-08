@@ -6,7 +6,7 @@ import {calculateRating} from '../utilities/numberutilities';
 /**
  * Represents a channel that a league has on the platform
  */
-export default class Channel extends Queryable {
+export class Channel extends Queryable {
 
 	/**
 	 * Constructs a new Channel object
